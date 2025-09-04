@@ -1,0 +1,2 @@
+# No runtime deps; tests use pytest (optional)
+pytest==8.2.2
