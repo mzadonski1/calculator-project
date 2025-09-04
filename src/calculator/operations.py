@@ -1,3 +1,10 @@
+import math 
+
+def sqrt(a: float) -> float:
+    if a < 0:
+        raise ValueError("Cannot take square root of a negative number.")
+    return math.sqrt(a)
+
 def add(a: float, b: float) -> float:
     return a + b
 
