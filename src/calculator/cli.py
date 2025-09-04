@@ -16,6 +16,7 @@ MENU: MenuMap = {
     "4": ("Division (a / b)", op.divide),
     "5": ("Exponent (a ** b)", op.exponent),
     "6": ("Modulus (a % b)", op.modulus),
+    "7": ("Square root (√a)", lambda a, b: op.sqrt(a)),
 }
 
 
