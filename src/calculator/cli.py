@@ -16,7 +16,7 @@ MENU: MenuMap = {
     "4": ("Division (a / b)", op.divide),
     "5": ("Exponent (a ** b)", op.exponent),
     "6": ("Modulus (a % b)", op.modulus),
-    "7": ("Square root (√a)", lambda a, b: op.sqrt(a)),
+    "7": ("Square root (√a)", None),
 }
 
 
@@ -45,6 +45,16 @@ def main() -> int:
         if choice not in MENU:
             print("Unknown option. Try again.")
             continue
+
+        if choice == "7":
+                   a = read_number("Enter a: ")
+                   try:
+                       result = op.sqrt(a)
+               except ValueError as e:
+                       print(f"Error: {e}")
+                       continue
+            print(f"Result (Square root √a): {result}")
+            continue   
 
         a = read_number("Enter a: ")
         b = read_number("Enter b: ")
